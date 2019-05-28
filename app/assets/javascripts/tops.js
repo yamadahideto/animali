@@ -1,10 +1,18 @@
 $(function(){
-
-  $("#pets").mouseleave(function(){
-    $('#pets').css("color", "white")
-  })
-
-  $("#pets").mouseover(function(){
-    $("#pets").css("color","red")
-  })
+  $("#pets,#person").hover(
+    function () {
+      $(this).css("color", "blue")
+    },
+    function () {
+      $(this).css("color", "white")
+    }
+  );
+  $(".header-title").hover(
+    function () {
+      $(this).css("opacity", "0.3");
+    },
+    function () {
+      $(this).css("opacity", "1");
+    }
+  );
 });

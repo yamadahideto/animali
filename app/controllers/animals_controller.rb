@@ -4,7 +4,6 @@ class AnimalsController < ApplicationController
   end
 
   def show
-    binding.pry
   end
 
   def details
