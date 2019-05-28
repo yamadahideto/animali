@@ -16,9 +16,9 @@
     .header
       .header-icon
         = link_to new_user_registration_path do
-          .material-icons person_add
+          .material-icons#person person_add
         = link_to animals_path do
-          .material-icons pets
+          .material-icons#pets pets
       .header-title
         = link_to "Animali", root_path
     = yield
