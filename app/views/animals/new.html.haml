@@ -1,0 +1,63 @@
+
+.new-content
+  .new-content__post
+    =form_with(url: root_path , local: true) do |f|
+
+      .field
+        .field-label
+          = f.label :画像
+        .field-input
+          = f.text_field :image, placeholder: "image"
+
+      .field
+        .field-label
+          = f.label :名前
+        .field-input
+          = f.text_field :name, placeholder: "名前"
+
+      .field
+        .field-label
+          = f.label :年齢
+        .field-input
+          = f.text_field :name, placeholder: "年齢"
+
+
+      .field
+        .field-label
+          = f.label :性別
+        .field-input
+          = f.text_field :name, placeholder: "性別"
+
+        .field
+          .field-label
+            = f.label :種類
+          .field-input
+            = f.text_field :image, placeholder: "種類"
+
+        .field
+          .field-label
+            = f.label :去勢の有無
+          .field-input
+            = f.text_field :image, placeholder: "去勢の有無"
+
+        .field
+          .field-label
+            = f.label :性格・特徴
+          .field-input
+            = f.text_field :image, placeholder: "性格・特徴"
+
+        .field
+          .field-label
+            = f.label :健康状態
+          .field-input
+            = f.text_field :image, placeholder: "健康状態"
+
+        -# .field
+        -#   .field-label
+        -#     = f.label :text
+        -#   .field-input
+        -#     = f.text_area :text, placeholder: "text",class: "contents_field"
+
+        %button.submit-btn{type: :"submit"}
+          .submit-btn_text 送信
+          %i.material-icons near_me
