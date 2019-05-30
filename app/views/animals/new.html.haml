@@ -1,63 +1,53 @@
 
 .new-content
-  .new-content__post
-    =form_with(url: root_path , local: true) do |f|
+  =form_with(url: root_path , local: true, class: "new-content-post") do |f|
+    .new-content-post_image
+      .new-content-post_image_upload
+        %p.new-content-post_image_head
+          写真のアップロード
+    .new-content-post-index
+      .new-content-post-index_title 名前
+      = f.text_field :name, class: "new-content-post-index_form",placeholder: "ポチ"
 
-      .field
-        .field-label
-          = f.label :画像
-        .field-input
-          = f.text_field :image, placeholder: "image"
+    .new-content-post-index
+      .new-content-post-index_title 年齢
+      = f.text_field :age, class: "new-content-post-index_form",placeholder: "4才"
 
-      .field
-        .field-label
-          = f.label :名前
-        .field-input
-          = f.text_field :name, placeholder: "名前"
+    .new-content-post-index
+      .new-content-post-index_title 性別
+      = f.text_field :sex, class: "new-content-post-index_form",placeholder: "オス"
 
-      .field
-        .field-label
-          = f.label :年齢
-        .field-input
-          = f.text_field :name, placeholder: "年齢"
+    .new-content-post-index
+      .new-content-post-index_title 種類
+      = f.text_field :type, class: "new-content-post-index_form",placeholder: "雑種"
+
+    .new-content-post-index
+      .new-content-post-index_title 去勢の有無
+      = f.text_field :castration, class: "new-content-post-index_form",placeholder: "あり"
+
+    .new-content-post-index
+      .new-content-post-index_title 性格・特徴
+      = f.text_area :character, class: "new-content-post-index_text", placeholder: "性格・特徴保護当初はとても怖がりでした。餌をやる人がいたようですが、人に喜んで身を寄せることはありませんでした。職員さんが毎日撫ででくれるので、今では人に撫でられるのがとても好きになりました。おばあちゃんで穏やかなのでこちらまで癒されるそうです。"
+
+    .new-content-post-index
+      .new-content-post-index_title  健康状態
+      = f.text_area :condition, class: "new-content-post-index_text", placeholder: "今のところとても元気で健康面に影響はなさそうです。"
+
+    .new-content-post-index
+      .new-content-post-index_title 募集経緯
+      = f.text_area :Recruitment, class: "new-content-post-index_text", placeholder: "山口県のセンターはセンターに収容されれば基本一週間という短い収容期限があります。その期限内に新しい飼い主に巡り会えなければその後、愛護センターに搬送され、一部譲渡可能な子（子犬や子猫がほとんど）は殺処分を免れますが、ほとんどの子は殺処分されてしまいます。どうか、この子達が愛護センターに搬送される前に温かい手を差し伸べて下さい。お願い致します"
+
+    .new-content-post-index
+      .new-content-post-index_title  引き取り方法
+      = f.text_area :Delivery, class: "new-content-post-index_text", placeholder: "センターにてお引き渡し"
+
+    .new-content-post-index
+      .new-content-post-index_title その他・備考
+      = f.text_area :remarks, class: "new-content-post-index_text", placeholder: "家族として迎え入れてくれる方を探しています。これまでつらい思いをしてきた子です。本当の家族を見つけてあげたいです。最後の時まで愛情と責任を持って飼うことができる方宜しくお願いします。"
 
 
-      .field
-        .field-label
-          = f.label :性別
-        .field-input
-          = f.text_field :name, placeholder: "性別"
+  .new-content__footer
 
-        .field
-          .field-label
-            = f.label :種類
-          .field-input
-            = f.text_field :image, placeholder: "種類"
-
-        .field
-          .field-label
-            = f.label :去勢の有無
-          .field-input
-            = f.text_field :image, placeholder: "去勢の有無"
-
-        .field
-          .field-label
-            = f.label :性格・特徴
-          .field-input
-            = f.text_field :image, placeholder: "性格・特徴"
-
-        .field
-          .field-label
-            = f.label :健康状態
-          .field-input
-            = f.text_field :image, placeholder: "健康状態"
-
-        -# .field
-        -#   .field-label
-        -#     = f.label :text
-        -#   .field-input
-        -#     = f.text_area :text, placeholder: "text",class: "contents_field"
-
-        %button.submit-btn{type: :"submit"}
-          .submit-btn_text 送信
-          %i.material-icons near_me
+  %button.submit-btn{type: :"submit"}
+    .submit-btn_text 送信
+    %i.material-icons near_me

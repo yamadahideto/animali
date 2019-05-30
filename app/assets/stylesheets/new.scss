@@ -1,41 +1,90 @@
-
 .new-content{
-  width: 100%;
   height: 100%;
-  &__post{
+  width: 100%;
+  overflow: scroll;
+  background-color: #808080;
+  background-image: url("https://www.pakutaso.com/shared/img/thumb/KZ18618nihikinokamo_TP_V4.jpg");
+
+  &-post{
     width: calc(1020px - 320px);
-    background-color: red;
-    margin: 0 auto;
-    form{
-      font-family: 'VT323', monospace;
-      color: white;
-      font-size: 30px;
-      input[type = "text"]{
-        min-height: 30px;
-        width: 400px;
-        border: solid 2px #0068b7;
-        margin-top: 10px;
+    font-size: 14px;
+    margin: 80px auto;
+    background: rgba(224,255,255,1);
+    margin-bottom: 60px;
+    border-radius: 5px;
+
+    &_image{
+      height: 250px;
+      width: 100%;
+      border-bottom: 1px solid #e6e6fa;
+      padding: 3px 0;
+
+      &_upload{
+        height: 220px;
+        width: 670px;
+        background-color: #fff;
+        margin: 10px auto;
+        border: solid 1px #d3d3d3;
       }
-      .contents_field{
-        height: 300px;
-        width: 100vh;
-        border: solid 2px green;
+    }
+
+    &-index{
+      padding: 20px 70px;
+      justify-content: space-between;
+      border-bottom: 2px solid #e6e6fa;
+      margin-top: 10px;
+      box-sizing: border-box;
+
+      &_title{
+        height: 40px;
+        width: 90px;
+        background-color: #fffaf0;
+        display: inline-block;
+        line-height: 40px;
+        text-align: center;
         margin-top: 10px;
+        border-radius: 5px;
       }
-      .submit-btn{
+
+      &_text{
+        height: 100px;
+        width: 500px;
+        background-color: white;
+        margin-top: 15px;
+        border-radius: 5px;
+        resize: none;
+        border: solid 2px #d3d3d3;
+        padding-left: 5px;
+      }
+      &_form{
+        // height: 40px;
+        // width: 550px;
+        // background-color: white;
+        // margin-top: 10px;
+      }
+    }
+  }
+  &__footer{
+    height: 200px;
+  }
+}
+
+
+ .submit-btn{
         position: fixed;
         bottom: 30px;
-        right: 160px;
+        right: 300px;
         z-index: 1000;
-        width: 110px;
-        height: 110px;
+        width: 90px;
+        height: 90px;
         border-radius: 50%;
-        background: #f39800;
+        background: #1e90ff;
         color: #fff;
         text-align: center;
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
 
         .submit-btn a {
           text-decoration: none;
@@ -55,8 +104,7 @@
 
         }
       }
-    }
-  }
-}
+
+
 
 
