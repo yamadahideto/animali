@@ -208,6 +208,13 @@ body {
       .card-content{
         opacity: 0.3;
         font-family: 'Homemade Apple', cursive;
+
+        p{
+          display: none;
+        }
+        .text-active{
+          display: block;
+        }
       }
       .card-action{
         font-size: 20px;
