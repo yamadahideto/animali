@@ -1,7 +1,7 @@
 $(function(){
   document.addEventListener('turbolinks:load', function () {
 
-    $("#pets,#person,#thumb_up_alt").hover(
+    $(".material-icons").hover(
       function () {
         $(this).css("opacity", "0.3")
       },

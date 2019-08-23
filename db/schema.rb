@@ -14,28 +14,13 @@ ActiveRecord::Schema.define(version: 2019_05_22_034641) do
 
   create_table "animals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.integer "age"
-    t.string "castration"
-    t.string "sex", null: false
-    t.string "type", null: false
-    t.text "Recruitment", null: false
-    t.text "character", null: false
-    t.text "condition", null: false
-    t.text "Delivery", null: false
-    t.text "remarks", null: false
-    t.bigint "facilitiy_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["facilitiy_id"], name: "index_animals_on_facilitiy_id"
   end
 
   create_table "facilitys", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "adless", null: false
-    t.bigint "animal_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["animal_id"], name: "index_facilitys_on_animal_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

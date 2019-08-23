@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'animals#tops'
   devise_for :users
+  root 'animals#tops'
   resources :animals do
     collection do
       get 'details'

@@ -22,28 +22,59 @@ $(function () {
 
     });
 
+
+
+    // 動物登録画面
+    $(".new-content-post-index_text").click(function () {
+      $(this).animate({
+        "width": "555px"
+      }, 250)
+
+    });
+
     $(".submit-btn").hover(
       function(){
         $(this).css("opacity", "0.9");
         $(this).animate({
           "height": "100px",
-          "width": "100px"
-        },200)
+          "width": "100px",
+          "color": "red"
+        },500)
+
+        $("#near_me").css("color","blue")
       },
       function(){
         $(this).css("opacity", "1");
         $(this).animate({
           "height": "90px",
-          "width": "90px"
-        },200)
+          "width": "90px",
+          "color": "white"
+        },500)
+        $("#near_me").css("color", "white")
       }
     );
 
-    $(".new-content-post-index_text").click(function(){
-      $(this).animate({
-        "width": "555px"
-      }, 200)
+    $(".edit-btn").hover(
+      function(){
+        $(this).animate({
+          "height": "70px",
+          "width": "100%",
+          "font-size":"18px",
+          "opacity": "0.7",
+          "border-radius":"50px"
+        },800);
 
-    });
+      },
+      function(){
+        $(this).animate({
+          "height": "60px",
+          "width": "100%",
+          "font-size": "15px",
+          "opacity": "1",
+          "border-radius": "8px"
+        },800);
+
+      }
+    );
   });
 });

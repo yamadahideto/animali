@@ -25,6 +25,7 @@
         background-color: #fff;
         margin: 10px auto;
         border: solid 1px #d3d3d3;
+
       }
     }
 
@@ -91,6 +92,7 @@
           color: white;
           font-size: 22px;
           margin: 100px;
+
         }
 
         .submit-btn:hover {
@@ -99,8 +101,11 @@
         }
 
         .submit-btn_text{
-          color:white;
+          background-color: #1e90ff;
           font-size: 20px;
+          border-radius: 50%;
+          border-style: none;
+          color: white;
 
         }
       }

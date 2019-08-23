@@ -1,4 +1,4 @@
 class Animal < ApplicationRecord
-
-  belongs_to :facility
+  # belongs_to :user
+  # belongs_to :facility
 end

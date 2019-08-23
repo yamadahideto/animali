@@ -66,3 +66,4 @@ gem 'erb2haml'
 gem 'devise'
 gem 'devise-bootstrap-views'
 gem 'jquery-rails'
+gem "nokogiri", ">= 1.10.4"

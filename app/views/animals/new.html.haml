@@ -1,10 +1,11 @@
 
 .new-content
-  =form_with(url: root_path , local: true, class: "new-content-post") do |f|
+  =form_for(@animal,local: true, class: "new-content-post") do |f|
     .new-content-post_image
       .new-content-post_image_upload
-        %p.new-content-post_image_head
-          写真のアップロード
+        =f.label :image, class: "image_upload-box" do
+          = f.file_field :image, class: 'image_upload-photo',multiple: true
+        %p.new-content-post_image_head 写真アップロード
     .new-content-post-index
       .new-content-post-index_title 名前
       = f.text_field :name, class: "new-content-post-index_form",placeholder: "ポチ"
@@ -19,7 +20,7 @@
 
     .new-content-post-index
       .new-content-post-index_title 種類
-      = f.text_field :type, class: "new-content-post-index_form",placeholder: "雑種"
+      = f.text_field :kind, class: "new-content-post-index_form",placeholder: "雑種"
 
     .new-content-post-index
       .new-content-post-index_title 去勢の有無
@@ -35,19 +36,20 @@
 
     .new-content-post-index
       .new-content-post-index_title 募集経緯
-      = f.text_area :Recruitment, class: "new-content-post-index_text", placeholder: "山口県のセンターはセンターに収容されれば基本一週間という短い収容期限があります。その期限内に新しい飼い主に巡り会えなければその後、愛護センターに搬送され、一部譲渡可能な子（子犬や子猫がほとんど）は殺処分を免れますが、ほとんどの子は殺処分されてしまいます。どうか、この子達が愛護センターに搬送される前に温かい手を差し伸べて下さい。お願い致します"
+      = f.text_area :recruitment, class: "new-content-post-index_text", placeholder: "山口県のセンターはセンターに収容されれば基本一週間という短い収容期限があります。その期限内に新しい飼い主に巡り会えなければその後、愛護センターに搬送され、一部譲渡可能な子（子犬や子猫がほとんど）は殺処分を免れますが、ほとんどの子は殺処分されてしまいます。どうか、この子達が愛護センターに搬送される前に温かい手を差し伸べて下さい。お願い致します"
 
     .new-content-post-index
       .new-content-post-index_title  引き取り方法
-      = f.text_area :Delivery, class: "new-content-post-index_text", placeholder: "センターにてお引き渡し"
+      = f.text_area :delivery, class: "new-content-post-index_text", placeholder: "センターにてお引き渡し"
 
     .new-content-post-index
       .new-content-post-index_title その他・備考
       = f.text_area :remarks, class: "new-content-post-index_text", placeholder: "家族として迎え入れてくれる方を探しています。これまでつらい思いをしてきた子です。本当の家族を見つけてあげたいです。最後の時まで愛情と責任を持って飼うことができる方宜しくお願いします。"
 
+    %button.submit-btn
+      = f.submit '送信',class: "submit-btn_text"
+      %i.material-icons#near_me near_me
+
+
 
   .new-content__footer
-
-  %button.submit-btn{type: :"submit"}
-    .submit-btn_text 送信
-    %i.material-icons near_me

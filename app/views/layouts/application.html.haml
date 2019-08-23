@@ -15,14 +15,25 @@
   %body
     .header
       .header-icon
-        = link_to new_user_registration_path do
-          .material-icons#person person_add
+        - if user_signed_in?
+          = link_to destroy_user_session_path, method: :delete do
+            .material-icons#exit exit_to_app
+          ログアウト
+        - else
+          = link_to new_user_session_path do
+            .material-icons#exit exit_to_app
+          = link_to new_user_registration_path do
+            .material-icons#person person_add
+      .header-title
+        
+        
+
+        
+
+      .header-icon
         = link_to animals_path do
           .material-icons#pets pets
-
         = link_to new_animal_path do
           .material-icons#thumb_up_alt thumb_up_alt
-      .header-title
-        = link_to "Animali", root_path
     = yield
 
